@@ -8,9 +8,7 @@ let simpleCredit = 0;
 let simpleBonus = 0;
 let deliveryCredit = 0;
 let deliveryBonus = 0;
-const arr = Object.keys(result).map(k => result[k])[0];
-arr.splice(0, 5);
-arr.splice(arr.length - 3, 3);
+const arr = Object.keys(result).map(k => result[k])[0].filter(item => Date.parse(item.D) < Date.parse('2021-04-24T00:00:00.000Z'));
 
 const simple = arr.filter(item => item.N !== 'Бонусы проведены в доставке');
 const delivery = arr.filter(item => item.N === 'Бонусы проведены в доставке');
