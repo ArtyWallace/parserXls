@@ -8,8 +8,7 @@ let simpleCredit = 0;
 let simpleBonus = 0;
 let deliveryCredit = 0;
 let deliveryBonus = 0;
-
-const arr = result["Отчет по транзакциям TOMAS'a"];
+const arr = Object.keys(result).map(k => result[k])[0];
 arr.splice(0, 5);
 arr.splice(arr.length - 3, 3);
 
